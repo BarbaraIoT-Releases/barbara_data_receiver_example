@@ -1,0 +1,40 @@
+version: '2'
+services:
+    mqtt_mongodb:
+        image: mongo:latest
+        container_name: "mqtt_mongodb"
+        environment:
+          - MONGO_DATA_DIR=/data/example/db
+          - MONGO_LOG_DIR=/dev/example/null
+        volumes:
+          - /data/example/db:/data/example/db
+        ports:
+            - 37017:27017
+        command: mongod
+        restart: always
+        networks:
+            example_net:
+                ipv4_address: 172.16.50.10
+    mqtt_node_client:
+        build: .
+        container_name: "mqtt_node_client"
+        environment:
+            - HOST=example.com
+            - TOPIC=topicName
+        volumes:
+            - /home/ubuntu/example/certs:/code/certs
+        links:
+            - mqtt_mongodb
+        depends_on:
+            - mqtt_mongodb
+        restart: always
+        networks:
+            example_net:
+                ipv4_address: 172.16.50.20
+networks:
+    example_net:
+        driver: bridge
+        ipam:
+          config:
+            - subnet: 172.16.50.0/24
+              gateway: 172.16.50.1

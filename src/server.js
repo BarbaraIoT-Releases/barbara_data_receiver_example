@@ -1,6 +1,6 @@
 //MongoDB connection data
 const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb://172.16.50.10:37017';
 const dbName = 'barbaraIoT';
 const mongoClient = new MongoClient(url);
 
