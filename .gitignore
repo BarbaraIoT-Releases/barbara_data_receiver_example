@@ -1,0 +1,6 @@
+node_modules
+package-*
+
+
+#omit certificates
+*.pem
