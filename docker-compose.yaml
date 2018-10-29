@@ -9,7 +9,7 @@ services:
         volumes:
           - /data/example/db:/data/example/db
         ports:
-            - 37017:27017
+            - 27017:27017
         command: mongod
         restart: always
         networks:
