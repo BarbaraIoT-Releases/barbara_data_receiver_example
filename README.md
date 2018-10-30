@@ -3,15 +3,19 @@
   Barbara Data Receiver Example
 </h1>
 
+<br/>
+
 # Introduction
 
 This is an example to gather the messages published in a MQTT topic and store it in a MongoDB database. The client, built in NodeJS, connects to the MQTT server over TLS and starts listening in a topic provided. When a message arrives, it takes the message and inserts it raw in a mongo collection. Both servers are containerized using Docker and can be built and deployed using Docker compose.
 
+<br/>
 
 # Installation
 
 In order to run this software, it is necessary to install Docker CE. [Find the instructions here.](https://docs.docker.com/install/) Also docker compose is required. [Install docker compose.](https://docs.docker.com/compose/install/)
 
+<br/>
 
 # Start up the servers
 ### Clone the repository
@@ -56,6 +60,7 @@ Identify the containers you want to stop, and run:
 In case you want to stop and also delete a running container, execute: 
 >docker rm -f  7f6ecaf856f9 da96f5374cba
 
+<br/>
 
 # Check the data stored
 Once the device has started to send data to the mqtt server, the mongodb database should have stored all the information. In order to check the collection in mongo server, any tool can be used. For instance, [Mongo Compass](https://www.mongodb.com/products/compass) or [Studio 3T](https://studio3t.com/download/)
