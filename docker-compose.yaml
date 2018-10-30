@@ -21,8 +21,6 @@ services:
         environment:
             - HOST=example.com
             - TOPIC=topicName
-        volumes:
-            - /home/ubuntu/example/certs:/code/certs
         links:
             - mqtt_mongodb
         depends_on:
