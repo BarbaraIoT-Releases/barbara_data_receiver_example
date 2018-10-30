@@ -38,8 +38,8 @@ const insertOneDocument = (db, document2Insert) => {
 options = {
     port: 8883,
     host: HOST,
-    key: fs.readFileSync('./certs/key.pem'),
-    cert: fs.readFileSync('./certs/cert.pem'),
+    key: fs.readFileSync('./certs/client-key.pem'),
+    cert: fs.readFileSync('./certs/client-cert.pem'),
     rejectUnauthorized: true,
     ca: fs.readFileSync('./certs/ca.pem'),
     protocol: 'mqtts'
