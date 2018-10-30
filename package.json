@@ -1,0 +1,23 @@
+{
+  "name": "barbara_data_receiver_example",
+  "version": "1.0.0",
+  "description": "Example of an application to store data into a mongodb database from an mqtt server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmir17/barbara_data_receiver_example.git"
+  },
+  "author": "jmir.17@gmail.com",
+  "license": "GPL-2.0-only",
+  "bugs": {
+    "url": "https://github.com/jmir17/barbara_data_receiver_example/issues"
+  },
+  "homepage": "https://github.com/jmir17/barbara_data_receiver_example#readme",
+  "dependencies": {
+    "mongodb": "^3.1.8",
+    "mqtt": "^2.18.8"
+  }
+}
