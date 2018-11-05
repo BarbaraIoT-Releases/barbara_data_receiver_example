@@ -1,6 +1,6 @@
 //MongoDB connection data
 const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://172.16.50.10:27017';
+const url = 'mongodb://10.10.10.10:27017';
 const dbName = 'barbaraIoT';
 const mongoClient = new MongoClient(url, {useNewUrlParser: true, reconnectTries: 60, reconnectInterval: 1000});
 
