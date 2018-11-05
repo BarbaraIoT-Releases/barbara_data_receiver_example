@@ -36,6 +36,7 @@ To set the server url and the topic to parse, in the root path of the repository
 
 This will set the values as environment variables inside the node server.
 
+Also, check that the IP configuration is not shared with any other network in your environment.
 
 ### Run the containers
 In the root path of the repository, run the containers with this command:

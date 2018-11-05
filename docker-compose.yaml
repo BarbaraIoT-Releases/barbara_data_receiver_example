@@ -14,7 +14,7 @@ services:
         restart: always
         networks:
             example_net:
-                ipv4_address: 172.16.50.10
+                ipv4_address: 10.10.10.10
     mqtt_node_client:
         build: .
         container_name: "mqtt_node_client"
@@ -28,11 +28,11 @@ services:
         restart: always
         networks:
             example_net:
-                ipv4_address: 172.16.50.20
+                ipv4_address: 10.10.10.20
 networks:
     example_net:
         driver: bridge
         ipam:
           config:
-            - subnet: 172.16.50.0/24
-              gateway: 172.16.50.1
+            - subnet: 10.10.10.0/24
+              gateway: 10.10.10.1
